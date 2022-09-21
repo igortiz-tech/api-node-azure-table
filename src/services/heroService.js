@@ -1,4 +1,3 @@
-// regras de negocios
 class HeroService {
     constructor({ heroRepository }) {
         this.heroRepository = heroRepository
@@ -14,4 +13,4 @@ class HeroService {
     }
 }
 
-module.export = HeroService
+module.exports = HeroService

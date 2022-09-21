@@ -3,14 +3,16 @@ const file = join(__dirname,'../', '../database', 'data.json')
 
 
 const HeroRepository = require('../repositories/heroRepository')
-const HeroService = require('../services/heroServices')
+const HeroService = require('../services/heroService')
 
 
 const generateInstance = () => {
     const heroRepository = new HeroRepository({file})
-    const heroServices = HeroService({heroRepository})
+    const heroServices = new HeroService({heroRepository})
     return heroServices;
 }
 
 
-module.export = { generateInstance }
+module.exports = { generateInstance }
+
+// generateInstance().find().then(console.log)
